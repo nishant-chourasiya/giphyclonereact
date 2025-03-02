@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './pages/Home'
+import Home from './pages/home'
 import Catogory from './pages/category'
 import Search from './pages/search'
 import Favorites from './pages/favorites'
