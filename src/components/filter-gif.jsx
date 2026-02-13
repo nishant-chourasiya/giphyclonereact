@@ -1,6 +1,8 @@
 import React from 'react'
 import { GifState } from '../context/gif-context';
 import { HiMiniArrowTrendingUp } from 'react-icons/hi2';
+import { useLocation } from 'react-router-dom';
+
 
 const filters = [
     {
@@ -22,6 +24,10 @@ const filters = [
 ];
 const FilterGif = ({ alignLeft = false, showTrending = false }) => {
     const { filter, setFilter } = GifState()
+    const location = useLocation();
+
+    const isSearchPage = location.pathname.includes('/search');
+
 
 
     return (
@@ -32,7 +38,7 @@ const FilterGif = ({ alignLeft = false, showTrending = false }) => {
             {
                 showTrending && (<span className='flex gap-2'>
                     {showTrending && (
-                        <HiMiniArrowTrendingUp size={25} className='text-teal-400' />
+                        <HiMiniArrowTrendingUp size={35} className='text-teal-400' />
                     )}
                     <span className="font-semibold text-gray-300 ">trending</span>
 
